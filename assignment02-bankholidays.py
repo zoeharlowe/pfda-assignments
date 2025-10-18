@@ -15,12 +15,11 @@ data = response.json()
 # Create variable for Northern Ireland events. I sliced the data to only include Northern Ireland events
 ni_events = data['northern-ireland']['events']
 
-# Print statement to introduce list of holidays
-print("The dates of all bank holidays in Northern Ireland are as follows: ")
-      
+# Print statement to introduce list of NI bank holidays
+print(f"The bank holidays in Northern Ireland are: ")
+
 for event in ni_events: # For loop to print out dates of NI bank holidays
-    date = event['date']
-    print(date)
+    print(f"{event['title']} on {event['date']}")
 
 # Now I want to find the holidays unique to Northern Ireland
 # I used Stack Overflow to help me with this part of the code https://stackoverflow.com/questions/12897374/get-unique-values-from-a-list-in-python
